@@ -5,20 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import ru.fefu.activitytracker.databinding.ActivityWelcomeScreenBinding
 
 class WelcomeScreen : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome_screen)
+        binding = ActivityWelcomeScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val btnRegistration = findViewById<Button>(R.id.registrationButton)
-        btnRegistration.setOnClickListener {
+        binding.registrationButton.setOnClickListener {
             startActivity(Intent(this, RegistrationScreen::class.java))
         }
 
-        val clickText = findViewById<TextView>(R.id.textQuestion)
-        clickText.setOnClickListener {
+        binding.textQuestion.setOnClickListener {
             startActivity(Intent(this, LoginScreen::class.java))
         }
+
     }
 }
