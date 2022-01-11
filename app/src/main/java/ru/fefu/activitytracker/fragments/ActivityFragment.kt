@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.fefu.activitytracker.R
-
 import android.widget.TableLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import ru.fefu.activitytracker.ViewPagerAdapter
+import ru.fefu.activitytracker.adapters.ViewPagerAdapter
 import ru.fefu.activitytracker.databinding.FragmentActivityBinding
 
 class ActivityFragment : Fragment() {

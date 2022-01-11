@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker
+package ru.fefu.activitytracker.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
